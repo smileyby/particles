@@ -1,13 +1,11 @@
-粒子效果
-=======
-
-经常会看到一些网站的背景是点线连接，而且会随着鼠标的移动而移动。今天就来告诉大家这个效果是怎么实现的。
-
-其实只要引用一个JS库就可以实现这个效果啦。
-
-> html
-
-```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>particles</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
 
 <!-- particles.js container -->
 <div id="particles-js"></div>
@@ -17,81 +15,13 @@
   <span class="js-count-particles">--</span> particles
 </div>
 
-```
+<script type="text/javascript" src="js/particles.min.js"></script>
 
-> css
-
-```css
-
-/* ---- reset ---- */
-
-body {
-  margin: 0;
-  font:normal 75% Arial, Helvetica, sans-serif;
-}
-
-canvas {
-  display: block;
-  vertical-align: bottom;
-}
-
-/* ---- particles.js container ---- */
-
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #b61924;
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-/* ---- stats.js ---- */
-
-.count-particles{
-  background: #000022;
-  position: absolute;
-  top: 48px;
-  left: 0;
-  width: 80px;
-  color: #13E8E9;
-  font-size: .8em;
-  text-align: left;
-  text-indent: 4px;
-  line-height: 14px;
-  padding-bottom: 2px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
-}
-
-.js-count-particles{
-  font-size: 1.1em;
-}
-
-#stats,
-.count-particles{
-  -webkit-user-select: none;
-}
-
-#stats{
-  border-radius: 3px 3px 0 0;
-  overflow: hidden;
-}
-
-.count-particles{
-  border-radius: 0 0 3px 3px;
-}
-
-```
-
-> js
-
-```javascript
+<!-- 展示性能Js -->
+<script type="text/javascript" src="js/stats.min.js"></script>
+<script type="text/javascript">
 
 /* ---- particles.js config ---- */
-
 particlesJS("particles-js", {
   "particles": {
     "number": {
@@ -223,7 +153,6 @@ update = function() {
   requestAnimationFrame(update);
 };
 requestAnimationFrame(update);
-
-```
-
-就是这么简单，我们就实现了这个高大上的效果。[Demo戳这里看效果]()
+</script>
+</body>
+</html>
