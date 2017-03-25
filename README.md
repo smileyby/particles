@@ -3,7 +3,9 @@
 
 经常会看到一些网站的背景是点线连接，而且会随着鼠标的移动而移动。今天就来告诉大家这个效果是怎么实现的。
 
-其实只要引用一个JS库就可以实现这个效果啦。
+其实只要引用一个JS库就可以实现这个效果啦。 
+
+** 引用的JS库 **[particles.js](https://github.com/VincentGarreau/particles.js)
 
 > html
 
@@ -226,4 +228,4 @@ requestAnimationFrame(update);
 
 ```
 
-就是这么简单，我们就实现了这个高大上的效果。[Demo戳这里看效果]()
+就是这么简单，我们就实现了这个高大上的效果。[Demo戳这里看效果](smileyby.github.io/particles/)
